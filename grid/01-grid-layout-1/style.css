@@ -22,10 +22,13 @@ html {
 
 .header {
   background-color: #006157;
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
 }
 
 .sidebar {
   background-color: #005B94;
+  grid-row: 2 / -2;
 }
 
 .nav {
@@ -38,6 +41,7 @@ html {
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / -1;
 }
 
 .article p {
@@ -45,4 +49,13 @@ html {
   font-family: sans-serif;
   color: white;
   text-align: left;
+}
+
+.container {
+  --columnSize: 220px;
+  --rowSize: 130px;
+  display: grid;
+  grid-template-columns: var(--columnSize) calc(3*var(--columnSize));
+  grid-template-rows: var(--rowSize) var(--rowSize) calc(5*var(--rowSize)) var(--rowSize);
+  gap: 15px;
 }
